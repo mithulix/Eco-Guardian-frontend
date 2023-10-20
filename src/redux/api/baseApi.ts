@@ -5,7 +5,7 @@ import { getFromLocalStorage } from "@/utils/local-storage";
 export const baseApi = createApi({
   reducerPath: "baseApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://earth-cleaner-backend-seven.vercel.app/api/v1",
+    baseUrl: "https://eco-guardian-backend-seven.vercel.app/api/v1",
     prepareHeaders: (headers) => {
       const accessToken = getFromLocalStorage("accessToken");
       if (accessToken) {

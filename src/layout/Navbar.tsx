@@ -34,7 +34,7 @@ export default function Navbar() {
           src="/logo.png"
           alt="logo"
           className="h-lg w-lg rounded-md"
-        />earth cleaner
+        />eco guardian
         </Link>
       </div>
       <div className="flex-none gap-2">

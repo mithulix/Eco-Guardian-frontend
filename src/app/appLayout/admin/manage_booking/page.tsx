@@ -68,11 +68,6 @@ export default function BookingHistory() {
       <h2 className="text-3xl font-bold">Manage Service Page</h2>
       <div className="mt-12">
         <div className="flex justify-between items-center mb-6">
-          {/* <input
-            type="text"
-            placeholder="Type here"
-            className="input input-bordered w-full max-w-xs"
-          /> */}
         </div>
         {tableData?.length ? (
           <Table rowItems={rowItems} tableData={tableData} />

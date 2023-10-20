@@ -36,7 +36,7 @@ export default function ServiceDetails({ params }: { params: { id: string } }) {
     }
     const data = { service: id, serviceDate: date };
     addBooking(data);
-    toast.success("Thanks for booking our service 😊");
+    toast.success("Thanks for booking our service");
   };
 
   const handleAddToCart = () => {

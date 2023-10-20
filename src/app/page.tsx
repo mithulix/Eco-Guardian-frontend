@@ -28,7 +28,6 @@ export default function Home() {
     <main>
       <Banner />
       <CategorySection />
-      {/* <Overview /> */}
       <AvailableService />
       <UpcomingService />
       <ClientReview />

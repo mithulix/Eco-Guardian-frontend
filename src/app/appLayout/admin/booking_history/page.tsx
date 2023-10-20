@@ -1,7 +1,6 @@
 "use client";
 import Table from "@/components/ui/Table";
 import { useGetBookingsQuery } from "@/redux/api/bookingApi";
-import { getUserInfo } from "@/services/auth.services";
 import moment from "moment";
 import React, { useState } from "react";
 

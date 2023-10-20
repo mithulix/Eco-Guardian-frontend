@@ -1,6 +1,5 @@
 "use client";
 import Table from "@/components/ui/Table";
-import { useDeleteServiceMutation } from "@/redux/api/serviceApi";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import moment from "moment";

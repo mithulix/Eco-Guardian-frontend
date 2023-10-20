@@ -1,10 +1,10 @@
 
 ```markdown
-# Earth Cleaner
+# eco guardian
 
 ## Description
 
-The Earth Cleaner is a front-end application developed by Mohaiminul Islam (@mithulix). This project is designed to help protect and clean our environment. It provides a user-friendly interface to access various features and tools for environmental conservation.
+The eco guardian is a front-end application developed by Mohaiminul Islam (@mithulix). This project is designed to help protect and clean our environment. It provides a user-friendly interface to access various features and tools for environmental conservation.
 
 ## Version
 

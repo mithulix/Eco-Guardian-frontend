@@ -4,7 +4,6 @@ import { useGetBookingsQuery } from "@/redux/api/bookingApi";
 import { useGetServicesQuery } from "@/redux/api/serviceApi";
 import { getUserInfo } from "@/services/auth.services";
 import moment from "moment";
-import Link from "next/link";
 import React from "react";
 
 export default function BookingHistory() {

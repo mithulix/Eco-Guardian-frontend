@@ -18,7 +18,7 @@ export default function ServicesByCategory({ params }: any) {
         </div>
       ) : (
         <p className="text-center ">
-          No services haven&apos;t created yet with this category :(
+          No services isn&apos;t created yet with this category.
         </p>
       )}
     </div>

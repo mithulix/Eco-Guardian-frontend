@@ -22,7 +22,7 @@ export default function CartItems({ items }: any) {
           </div>
         ))
       ) : (
-        <span>Noting added yet :(</span>
+        <span>It&apos;s empty</span>
       )}
     </div>
   );
