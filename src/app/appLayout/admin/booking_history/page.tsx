@@ -1,0 +1,58 @@
+"use client";
+import Table from "@/components/ui/Table";
+import { useGetBookingsQuery } from "@/redux/api/bookingApi";
+import { getUserInfo } from "@/services/auth.services";
+import moment from "moment";
+import React, { useState } from "react";
+
+export default function BookingHistory() {
+  const rowItems = ["", "Title", "Price", "Status", "Created At"];
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const query: Record<string, unknown> = { page: 1, limit: 100 };
+  query["searchTerm"] = searchTerm;
+  const { data } = useGetBookingsQuery(query);
+  
+  const tableData = data?.data?.map((data: any, i: number) => {
+    let badgeColor = "badge-primary";
+
+    if (data?.status == "approved") badgeColor = "badge-secondary";
+
+    if (data?.status == "rejected") badgeColor = "badge-error";
+
+    if (data?.status == "canceled") badgeColor = "badge-neutral";
+
+    return (
+      <tr key={data._id} className="hover">
+        <th>{i + 1}</th>
+        <td>{data?.service?.title}</td>
+        <td>{data?.service?.price}</td>
+        <td>
+          <span className={`badge ${badgeColor} badge-sm`}>{data?.status}</span>
+        </td>
+        <td>{moment(data?.createdAt).format("DD MMM YYYY")}</td>
+        <td></td>
+      </tr>
+    );
+  });
+
+  return (
+    <div>
+      <h2 className="text-3xl font-bold">Manage Service Page</h2>
+      <div className="mt-12">
+        <div className="flex justify-between items-center mb-6">
+          <input onChange={(e) => setSearchTerm(e.target.value)}
+            type="text"
+            placeholder="Type here"
+            className="input input-bordered w-full max-w-xs"
+          />
+        </div>
+        {tableData?.length ? (
+          <Table rowItems={rowItems} tableData={tableData} />
+        ) : (
+          <p className="mt-5 text-xl text-center">No Data</p>
+        )}
+      </div>
+    </div>
+  );
+}
